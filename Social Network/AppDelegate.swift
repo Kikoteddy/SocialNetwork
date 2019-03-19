@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
-        return true 
+        return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
