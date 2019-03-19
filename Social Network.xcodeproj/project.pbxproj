@@ -13,6 +13,11 @@
 		9F7C7F44223A755800B732C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F7C7F43223A755800B732C8 /* Assets.xcassets */; };
 		9F7C7F47223A755800B732C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F7C7F45223A755800B732C8 /* LaunchScreen.storyboard */; };
 		9F7C7F4F223A762700B732C8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F7C7F4E223A762700B732C8 /* GoogleService-Info.plist */; };
+		9F889ABD224112E300FB732A /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F889ABC224112E300FB732A /* FancyView.swift */; };
+		9F889AC02241139200FB732A /* CONST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F889ABF2241139200FB732A /* CONST.swift */; };
+		9F889AC22241162300FB732A /* RoundFbBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F889AC12241162300FB732A /* RoundFbBtn.swift */; };
+		9F889AC42241186300FB732A /* FancyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F889AC32241186300FB732A /* FancyTextField.swift */; };
+		9F889AC622411A4800FB732A /* FancySignInBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F889AC522411A4800FB732A /* FancySignInBtn.swift */; };
 		CBF35AA0151B25B7F290B69A /* Pods_Social_Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B701CF0592D77FA5F8F320D /* Pods_Social_Network.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +33,11 @@
 		9F7C7F46223A755800B732C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F7C7F48223A755800B732C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F7C7F4E223A762700B732C8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9F889ABC224112E300FB732A /* FancyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
+		9F889ABF2241139200FB732A /* CONST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CONST.swift; sourceTree = "<group>"; };
+		9F889AC12241162300FB732A /* RoundFbBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundFbBtn.swift; sourceTree = "<group>"; };
+		9F889AC32241186300FB732A /* FancyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyTextField.swift; sourceTree = "<group>"; };
+		9F889AC522411A4800FB732A /* FancySignInBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancySignInBtn.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +79,10 @@
 		9F4AA102223A798B008299E7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9F889ABC224112E300FB732A /* FancyView.swift */,
+				9F889AC12241162300FB732A /* RoundFbBtn.swift */,
+				9F889AC32241186300FB732A /* FancyTextField.swift */,
+				9F889AC522411A4800FB732A /* FancySignInBtn.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -102,6 +116,7 @@
 		9F7C7F3B223A755700B732C8 /* Social Network */ = {
 			isa = PBXGroup;
 			children = (
+				9F889ABE2241138600FB732A /* Utils */,
 				9F4AA101223A7984008299E7 /* Model */,
 				9F4AA102223A798B008299E7 /* View */,
 				9F4AA103223A798F008299E7 /* Controller */,
@@ -113,6 +128,14 @@
 				9F7C7F48223A755800B732C8 /* Info.plist */,
 			);
 			path = "Social Network";
+			sourceTree = "<group>";
+		};
+		9F889ABE2241138600FB732A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9F889ABF2241139200FB732A /* CONST.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,7 +277,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F7C7F3F223A755700B732C8 /* SignInVC.swift in Sources */,
+				9F889AC22241162300FB732A /* RoundFbBtn.swift in Sources */,
+				9F889AC02241139200FB732A /* CONST.swift in Sources */,
+				9F889AC42241186300FB732A /* FancyTextField.swift in Sources */,
+				9F889AC622411A4800FB732A /* FancySignInBtn.swift in Sources */,
 				9F7C7F3D223A755700B732C8 /* AppDelegate.swift in Sources */,
+				9F889ABD224112E300FB732A /* FancyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
