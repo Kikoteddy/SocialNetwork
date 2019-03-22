@@ -70,6 +70,9 @@
                                     </constraint>
                                 </constraints>
                                 <state key="normal" image="f"/>
+                                <connections>
+                                    <action selector="facebookBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vv4-Yp-0lT"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="VsL-61-8Tw">
                                 <rect key="frame" x="30" y="410" width="315" height="117"/>
