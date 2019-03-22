@@ -10,6 +10,7 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
+import SwiftKeychainWrapper
 
 class SignInVC: UIViewController {
     
@@ -51,6 +52,10 @@ class SignInVC: UIViewController {
                 print("TEDDY: Unable to authenticate with Firebase - \(error.debugDescription)")
             } else {
                 print("TEDDY: Successfully authenticated with Firebase")
+                if let user = user {
+                    KeychainWrapper.standard.set(user.user.uid, forKey: "kiko")
+                }
+                
             }
         }
     }

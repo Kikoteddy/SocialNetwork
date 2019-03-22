@@ -11,5 +11,6 @@ target 'Social Network' do
 	pod 'FirebaseUI/Auth'
 	pod 'Firebase/Storage'
   pod 'FBSDKLoginKit'
+  pod 'SwiftKeychainWrapper'
 
 end
