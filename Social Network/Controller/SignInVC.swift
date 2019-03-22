@@ -12,6 +12,9 @@ import FBSDKLoginKit
 import Firebase
 
 class SignInVC: UIViewController {
+    
+    @IBOutlet weak var emailField: FancyTextField!
+    @IBOutlet weak var passwordField: FancyTextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,11 +28,9 @@ class SignInVC: UIViewController {
         fbLogin.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
             
             guard error == nil else {
-                print(print("TEDDY: Unable to authenticate with Facebook - \(error!)"))
+                print("TEDDY: Unable to authenticate with Facebook - \(error!)")
                 return
             }
-            
-            
 //            if error != nil {
 //                print("TEDDY: Unable to authenticate with Facebook - \(error.debugDescription)")
 //            } else
@@ -52,8 +53,33 @@ class SignInVC: UIViewController {
                 print("TEDDY: Successfully authenticated with Firebase")
             }
         }
+    }
+    
+    @IBAction func signInTapped(_ sender: Any) {
+        
+        if let email = emailField.text, let password = passwordField.text {
+            Auth.auth().signIn(withEmail: email, password: password) { (user , error) in
+                if error == nil {
+                    print("TEDDY: Email user authenticated with Firebase")
+                } else {
+                    Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
+                        guard error == nil else {
+                            print("TEDDY: Unable to authenticate with Firebase using email - \(error!)")
+                            return
+                        }
+                        guard error != nil else {
+                            print("TEDDY: Successfully authenticated with Firebase using email")
+                            return
+                        }
+                    })
+                }
+            }
+            
+        }
+        
         
     }
+    
     
 }
 
