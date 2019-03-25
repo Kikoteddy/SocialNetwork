@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		9F418C322248CF3F0059F161 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F418C312248CF3F0059F161 /* FeedVC.swift */; };
+		9F49C62122491ABC00913E74 /* FeedCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F49C61F22491ABC00913E74 /* FeedCellTableViewCell.swift */; };
+		9F49C62222491ABC00913E74 /* FeedCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F49C62022491ABC00913E74 /* FeedCellTableViewCell.xib */; };
+		9F49C62422491FAF00913E74 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F49C62322491FAF00913E74 /* CircleView.swift */; };
 		9F7C7F3D223A755700B732C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C7F3C223A755700B732C8 /* AppDelegate.swift */; };
 		9F7C7F3F223A755700B732C8 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C7F3E223A755700B732C8 /* SignInVC.swift */; };
 		9F7C7F42223A755700B732C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F7C7F40223A755700B732C8 /* Main.storyboard */; };
@@ -27,6 +30,9 @@
 		4FE8600CFEB8F1087F19B85C /* Pods-Social Network.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social Network.release.xcconfig"; path = "Pods/Target Support Files/Pods-Social Network/Pods-Social Network.release.xcconfig"; sourceTree = "<group>"; };
 		9B701CF0592D77FA5F8F320D /* Pods_Social_Network.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Social_Network.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F418C312248CF3F0059F161 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		9F49C61F22491ABC00913E74 /* FeedCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCellTableViewCell.swift; sourceTree = "<group>"; };
+		9F49C62022491ABC00913E74 /* FeedCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedCellTableViewCell.xib; sourceTree = "<group>"; };
+		9F49C62322491FAF00913E74 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		9F7C7F39223A755700B732C8 /* Social Network.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Social Network.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F7C7F3C223A755700B732C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F7C7F3E223A755700B732C8 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -86,6 +92,9 @@
 				9F889AC12241162300FB732A /* RoundFbBtn.swift */,
 				9F889AC32241186300FB732A /* FancyTextField.swift */,
 				9F889AC522411A4800FB732A /* FancySignInBtn.swift */,
+				9F49C61F22491ABC00913E74 /* FeedCellTableViewCell.swift */,
+				9F49C62022491ABC00913E74 /* FeedCellTableViewCell.xib */,
+				9F49C62322491FAF00913E74 /* CircleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -213,6 +222,7 @@
 				9F7C7F44223A755800B732C8 /* Assets.xcassets in Resources */,
 				9F7C7F4F223A762700B732C8 /* GoogleService-Info.plist in Resources */,
 				9F7C7F42223A755700B732C8 /* Main.storyboard in Resources */,
+				9F49C62222491ABC00913E74 /* FeedCellTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,8 +307,10 @@
 				9F7C7F3F223A755700B732C8 /* SignInVC.swift in Sources */,
 				9F889AC22241162300FB732A /* RoundFbBtn.swift in Sources */,
 				9F889AC02241139200FB732A /* CONST.swift in Sources */,
+				9F49C62122491ABC00913E74 /* FeedCellTableViewCell.swift in Sources */,
 				9F889AC42241186300FB732A /* FancyTextField.swift in Sources */,
 				9F418C322248CF3F0059F161 /* FeedVC.swift in Sources */,
+				9F49C62422491FAF00913E74 /* CircleView.swift in Sources */,
 				9F889AC622411A4800FB732A /* FancySignInBtn.swift in Sources */,
 				9F7C7F3D223A755700B732C8 /* AppDelegate.swift in Sources */,
 				9F889ABD224112E300FB732A /* FancyView.swift in Sources */,

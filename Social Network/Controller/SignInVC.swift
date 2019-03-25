@@ -63,7 +63,6 @@ class SignInVC: UIViewController {
                 if let user = user {
                     self.completesignInWith(id: user.user.uid)
                 }
-                
             }
         }
     }
