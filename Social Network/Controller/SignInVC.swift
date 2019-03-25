@@ -19,7 +19,11 @@ class SignInVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        checkIfUserExists()
     }
 
     @IBAction func facebookBtnTapped(_ sender: Any) {
@@ -32,9 +36,7 @@ class SignInVC: UIViewController {
                 print("TEDDY: Unable to authenticate with Facebook - \(error!)")
                 return
             }
-//            if error != nil {
-//                print("TEDDY: Unable to authenticate with Facebook - \(error.debugDescription)")
-//            } else
+
             if result?.isCancelled == true {
                 print("TEDDY: User canceled Facebook authentication")
             } else {
@@ -46,6 +48,12 @@ class SignInVC: UIViewController {
         
     }
     
+    func checkIfUserExists(){
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID){
+            performSegue(withIdentifier: "goToFeed", sender: nil)
+        }
+    }
+    
     func firebaseAuthWith(_ credential: AuthCredential) {
         Auth.auth().signInAndRetrieveData(with: credential) { (user, error) in
             if error != nil {
@@ -53,7 +61,7 @@ class SignInVC: UIViewController {
             } else {
                 print("TEDDY: Successfully authenticated with Firebase")
                 if let user = user {
-                    KeychainWrapper.standard.set(user.user.uid, forKey: "kiko")
+                    self.completesignInWith(id: user.user.uid)
                 }
                 
             }
@@ -66,6 +74,9 @@ class SignInVC: UIViewController {
             Auth.auth().signIn(withEmail: email, password: password) { (user , error) in
                 if error == nil {
                     print("TEDDY: Email user authenticated with Firebase")
+                    if let user = user {
+                        self.completesignInWith(id: user.user.uid)
+                    }
                 } else {
                     Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
                         guard error == nil else {
@@ -74,17 +85,22 @@ class SignInVC: UIViewController {
                         }
                         guard error != nil else {
                             print("TEDDY: Successfully authenticated with Firebase using email")
+                            if let user = user {
+                                self.completesignInWith(id: user.user.uid)
+                            }
                             return
                         }
                     })
                 }
             }
-            
         }
-        
-        
     }
     
+    func completesignInWith(id: String) {
+       let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID) //read this check firebase/manageUsers
+        print("TEDDY: Data saved to keychain \(keychainResult)")
+        performSegue(withIdentifier: "goToFeed", sender: nil)
+    }
     
 }
 
